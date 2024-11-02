@@ -1,0 +1,200 @@
+ public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String belanja[]=new String[5];
+        int harga[]= new int[5];
+        int jumlah[]= new int[5];
+        int total[]= new int [5];
+        int pilih=0;
+        int item = 0;
+        int jum;
+        int pilihsubmenu,uang, kembalian;
+        int sum=IntStream.of(total).sum();
+        
+        do{
+            System.out.println("Daftar menu makanan");
+            System.out.println("----------------------------------------------------------------------");
+            System.out.println("1. Soto");
+            System.out.println("2. Pecel");
+            System.out.println("3. Ayam");
+            System.out.println("4. Teh");
+            System.out.println("5. Jeruk");
+            System.out.println("6. Selesai");
+            System.out.print("pilih: ");
+            pilih=sc.nextInt();
+            System.out.println();
+            switch(pilih){
+                case 1:
+                    System.out.println("1. Soto Ayam  : [Rp.15000]");
+                    System.out.println("2. Soto Daging: [Rp.18000]");
+                    System.out.print("pilih submenu: ");
+                    pilihsubmenu=sc.nextInt();
+                    if(pilihsubmenu==1){
+                      if(item<belanja.length){
+                      belanja[item]="Soto Ayam";
+                      harga[item]= 15000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      jumlah[item]=jum;
+                      System.out.println();
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }else if(pilihsubmenu==2){
+                      if(item<belanja.length){
+                      belanja[item]="Soto Daging";
+                      harga[item]= 18000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      jumlah[item]=jum;
+                      System.out.println();
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }
+                    break;
+                case 2:
+                    System.out.println("1. Pecel madiun  : [Rp.10000]");
+                    System.out.println("2. Pecel semanggi: [Rp.8000]");
+                    System.out.print("pilih submenu: ");
+                    pilihsubmenu=sc.nextInt();
+                    if(pilihsubmenu==1){
+                      if(item<belanja.length){
+                      belanja[item]="Pecel Madiun";
+                      harga[item]= 10000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }else if(pilihsubmenu==2){
+                      if(item<belanja.length){
+                      belanja[item]="Pecel Semanggi";
+                      harga[item]= 8000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }
+                    break;
+                case 3:
+                    System.out.println("1. Ayam Kemangi  : [Rp.12000]");
+                    System.out.println("2. Ayam Geprek   : [Rp.10000]");
+                    System.out.print("pilih submenu: ");
+                    pilihsubmenu=sc.nextInt();
+                    if(pilihsubmenu==1){
+                      if(item<belanja.length){
+                      belanja[item]="Ayam Kemangi";
+                      harga[item]= 12000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }else if(pilihsubmenu==2){
+                      if(item<belanja.length){
+                      belanja[item]="Ayam Geprek";
+                      harga[item]= 10000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }
+                    break;
+                case 4:
+                    System.out.println("1. Es Teh       : [Rp.5000]");
+                    System.out.println("2. Teh Hangat   : [Rp.4000]");
+                    System.out.print("pilih submenu: ");
+                    pilihsubmenu=sc.nextInt();
+                    if(pilihsubmenu==1){
+                      if(item<belanja.length){
+                      belanja[item]="Es Teh   ";
+                      harga[item]= 5000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }else if(pilihsubmenu==2){
+                      if(item<belanja.length){
+                      belanja[item]="Teh Hangat";
+                      harga[item]= 4000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }
+                    break;
+                case 5:
+                    System.out.println("1. Es Jeruk       : [Rp.5000]");
+                    System.out.println("2. Jeruk Hangat   : [Rp.4000]");
+                    System.out.print("pilih submenu: ");
+                    pilihsubmenu=sc.nextInt();
+                    if(pilihsubmenu==1){
+                      if(item<belanja.length){
+                      belanja[item]="Es Jeruk   ";
+                      harga[item]= 5000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }else if(pilihsubmenu==2){
+                      if(item<belanja.length){
+                      belanja[item]="Jeruk Hangat";
+                      harga[item]= 4000;
+                      System.out.print("jumlah: ");
+                      jum=sc.nextInt();
+                      System.out.println();
+                      jumlah[item]=jum;
+                      total[item]= harga[item]*jumlah[item];
+                      }else System.out.println("Keranjang penuh");
+                    }
+                    break;
+                case 6:
+                    System.out.println("----------------------------------------------------------------------");
+                    System.out.println("Daftar Belanja");
+                    System.out.println("----------------------------------------------------------------------");
+                    System.out.println("no\tBarang\t\tHarga\t\tQty\t\tTotal");
+                    System.out.println("----------------------------------------------------------------------");
+                    for (int i = 0; i < item; i++) {
+                        sum += total[i];
+                        System.out.print((i+1)+"\t"+belanja[i]);
+                        System.out.print("\t"+harga[i]+" ");
+                        System.out.print("\t\t["+jumlah[i]+"]");
+                        System.out.println("\t\t"+total[i]+" ");
+                        System.out.println();
+                    }
+                    System.out.println("----------------------------------------------------------------------");
+                    System.out.println("Grand Total:                                                Rp."+sum);
+                    System.out.println();
+                    System.out.print("Uang       :                                                Rp.");
+                    uang=sc.nextInt();
+                    if(uang==sum){
+                    System.out.println("                                                            Uang Pas");
+                    }else if(uang>sum){
+                        kembalian=uang-sum;
+                        System.out.println("Kembalian:                                              Rp."+kembalian);
+                    }else if(uang<sum){
+                        System.out.println("                                                Uang Kurang bots");
+                    } System.out.println();
+                    System.out.println("----------------------------------------------------------------------");
+                    break;
+            }
+            item++;
+            if(item>5){
+                System.out.println("jumlah yang dibeli: "+item);
+                break;
+            }
+        }while(pilih!=6);
+        System.out.println("\t\tTerima Kasih atas kunjugan anda\t\t");
+        System.out.println("----------------------------------------------------------------------");
+    }
+}
